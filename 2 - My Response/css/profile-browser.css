@@ -1,0 +1,178 @@
+/*
+profile-browser.css
+Modifies the defaults in easy-responsive-tabs.css
+
+By Paul Harvey
+26/09/2013
+*/
+
+/* Grid Layout */
+
+.page-container {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.list-container {
+    width: 28%;
+    height: 100%;
+    display: block;
+    float: left;
+    border-right: solid 1px gray;
+}
+
+.resp-tabs-container {
+    width: 70%;
+    display: block;
+    float: left;
+    border: none !important;
+}
+
+/* Tab List */
+
+.resp-vtabs ul.resp-tabs-list {
+    width: 100%;
+    border: solid 1px gray;
+    border-right: none !important;
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+    margin: 20px 0 100% 0;
+}
+
+.resp-vtabs li.resp-tab-item {
+    padding: 3px 15px 6px 10px !important;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+h2.resp-accordion {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 4px 0 5px 8px;
+    border-bottom: solid 1px gray;
+}
+
+.resp-accordion:first-child {
+    border-top: solid 1px gray;
+}
+
+.resp-tab-item, .resp-accordion {
+    /* Set Gradient */
+    background: #eeeeee; /* Old browsers */
+    background: -moz-linear-gradient(top, #eeeeee 0%, #cccccc 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #eeeeee 0%, #cccccc 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #eeeeee 0%, #cccccc 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #eeeeee 0%, #cccccc 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #eeeeee 0%, #cccccc 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#cccccc', GradientType=0); /* IE6-9 */
+}
+
+.resp-tab-item:first-child {
+    border-top-left-radius: 14px;
+}
+
+.resp-tab-item:last-child {
+    border-bottom-left-radius: 14px;
+}
+
+.resp-vtabs .resp-tab-active {
+    border-right: 1px solid white !important;
+    font-weight: bold !important;
+    background: none !important;
+	padding: 0 !important;
+	margin: 4px 0 0 8px;
+}
+
+.resp-accordion .resp-tab-active {
+    background: none !important;
+    border: none !important;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 4px 4px 4px 9px !important;
+}
+
+/* Content */
+
+.resp-vtabs .resp-tab-content {
+    border: none;
+	margin: 8px 10px 4px 0px;
+}
+
+body {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    background: none;
+}
+
+p {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+h1 {
+    margin: 21px 0;
+    text-align: center;
+    font-size: 33px;
+}
+
+h2 {
+    margin: 4px 0 10px;
+}
+
+.headshot {
+    float: left;
+    height: 110px;
+    width: 110px;
+    margin: 5px 10px 6px 0;
+    -webkit-box-shadow: 0 2px 5px #999;
+    -moz-box-shadow: 0 2px 5px #999;
+    -ms-box-shadow: 0 2px 5px #999;
+    -o-box-shadow: 0 2px 5px #999;
+    box-shadow: 0 2px 5px #999;
+    border: solid 1px #DDD;
+    padding: 4px;
+}
+
+.headshot div {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.headshot img {
+    width: 100%;
+    height: auto; /* Fixes IE bug */
+}
+
+/* Responsive Tweaks */
+
+@media only screen and (min-width: 769px) {
+    /* Desktop */
+    body {
+        margin: 0 21.5%;
+    }
+    .resp-tab-content {
+        padding: 4px 0 8px 19px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Mobile */
+    h2 {
+        display: none;
+    }
+
+    .resp-arrow {
+        display: none;
+    }
+
+    .resp-tab-content {
+        padding: 4px 6px 8px 8px !important;
+        margin: 5px 0 4px 0;
+    }
+
+    .headshot {
+        margin-top: 1px;
+    }
+}
